@@ -9,7 +9,10 @@
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.min.js"></script>
     <script src="jquery/interactions.js"></script>
+    <script src="jquery/form-validation.js"></script>
     <link href="./css/style.css" rel="stylesheet" />
   </head>
   <body>
@@ -72,179 +75,221 @@
         <div class="h-px bg-span_bg w-full my-5">
           <span></span>
         </div>
-        <!-- Form -->
-        <div id="q1">
+        <!-- Form does not have action -->
+        <form action="POST Somewhere" name="registration" class="flex flex-col items-start min-w-full">
+        <div id="q1" class="min-w-full">
           <h1 class="text-2xl font-bold">Some Question</h1>
-          <form class="flex flex-col items-start">
+          
             <p class="italic text-xs font-extralight">
               Select one of these options
             </p>
             <div
-              class="border border-black min-w-full rounded-lg p-5 mt-3 font-bold"
+              class="border border-black min-w-full rounded-lg pl-5 mt-3 font-bold"
             >
               <span class="p-3 bg-header_bg text-white rounded-md">A</span>
-              <input type="button" value="This is one answer" />
+              <input type="button" class= "py-5 pl-2 pr-10" value="This is one answer"> </input>
             </div>
             <div
-              class="border border-black min-w-full rounded-lg p-5 my-2 font-bold"
+              class="border border-black min-w-full rounded-lg pl-5 mt-3 font-bold"
             >
               <span class="p-3 bg-header_bg text-white rounded-md">B</span>
-              <input type="button" value="This is another answer" />
+              <input type="button" class= "py-5 pl-2 pr-10"  value="This is another answer" />
             </div>
-            <div class="flex ml-auto">
-              <input
-                type="submit"
-                value="Ok ✓"
-                class="bg-ok_bg rounded-lg p-3 mt-2 text-lg font-bold text-white"
-              />
-            </div>
-          </form>
+
         </div>
 
-        <div id="q2" class="hidden">
+        <div id="q2" class="hidden min-w-full">
           <h1 class="text-2xl font-bold">Some Question</h1>
-          <form class="flex flex-col items-start">
+          <!-- <form class="flex flex-col items-start"> -->
             <p class="italic text-xs font-extralight">
               Select one of these options
             </p>
             <div
-              class="border border-black min-w-full rounded-lg p-5 mt-3 font-bold"
+              class="border border-black min-w-full rounded-lg pl-5 my-3 font-bold"
             >
-              <span class="p-3 bg-header_bg text-white rounded-md">A</span>
-              <input type="button" value="This is one answer" />
+              <span class="p-3 bg-header_bg text-white rounded-md ">A</span>
+              <input type="button" class= "py-5 pl-2 pr-10" value="This is one answer" />
             </div>
             <div
-              class="border border-black min-w-full rounded-lg p-5 my-2 font-bold"
+              class="border border-black min-w-full rounded-lg pl-5 my-3 font-bold"
             >
               <span class="p-3 bg-header_bg text-white rounded-md">B</span>
-              <input type="button" value="This is another answer" />
+              <input type="button" class= "py-5 pl-2 pr-10" value="This is another answer" />
             </div>
             <div
-              class="border border-black min-w-full rounded-lg p-5 my-2 font-bold"
+              class="border border-black min-w-full rounded-lg pl-5 my-3 font-bold"
             >
               <span class="p-3 bg-header_bg text-white rounded-md">C</span>
-              <input type="button" value="This is another answer" />
+              <input type="button" class= "py-5 pl-2 pr-10" value="This is another answer" />
             </div>
             <div
-              class="border border-black min-w-full rounded-lg p-5 my-2 font-bold"
+              class="border border-black min-w-full rounded-lg pl-5 my-3 font-bold"
             >
               <span class="p-3 bg-header_bg text-white rounded-md">C</span>
-              <input type="button" value="This is another answer" />
+              <input type="button" class= "py-5 pl-2 pr-10" value="This is another answer" />
             </div>
-            <div class="flex ml-auto">
-              <input
-                type="submit"
-                value="Ok ✓"
-                class="bg-ok_bg rounded-lg p-3 mt-2 text-lg font-bold text-white"
-              />
-            </div>
-          </form>
+          <!-- </form> -->
         </div>
 
-        <div id="q3" class="hidden">
+        <div id="q3" class="hidden min-w-full">
           <h1 class="text-2xl font-bold">Some Question</h1>
-          <form class="flex flex-col items-start">
+          <!-- <form class="flex flex-col items-start"> -->
             <p class="italic text-xs font-extralight">
               Select one of these options
             </p>
             <div
-              class="border border-black min-w-full rounded-lg p-5 mt-3 font-bold"
+              class="border border-black min-w-full rounded-lg pl-5 mt-3 font-bold"
             >
               <span class="p-3 bg-header_bg text-white rounded-md">A</span>
-              <input type="button" value="This is one answer" />
+              <input type="button"  class= "py-5 pl-2 pr-10" value="This is one answer" />
             </div>
             <div
-              class="border border-black min-w-full rounded-lg p-5 my-2 font-bold"
+              class="border border-black min-w-full rounded-lg pl-5 mt-3  font-bold"
             >
               <span class="p-3 bg-header_bg text-white rounded-md">B</span>
-              <input type="button" value="This is another answer" />
+              <input type="button"  class= "py-5 pl-2 pr-10" value="This is another answer" />
             </div>
             <div
-              class="border border-black min-w-full rounded-lg p-5 my-2 font-bold"
+              class="border border-black min-w-full rounded-lg pl-5 mt-3  font-bold"
             >
               <span class="p-3 bg-header_bg text-white rounded-md">C</span>
-              <input type="button" value="This is another answer" />
+              <input type="button"  class= "py-5 pl-2 pr-10" value="This is another answer" />
             </div>
             <div
-              class="border border-black min-w-full rounded-lg p-5 my-2 font-bold"
+              class="border border-black min-w-full rounded-lg pl-5 mt-3  font-bold"
             >
               <span class="p-3 bg-header_bg text-white rounded-md">C</span>
-              <input type="button" value="This is another answer" />
+              <input type="button"  class= "py-5 pl-2 pr-10" value="This is another answer" />
             </div>
-            <div class="flex ml-auto">
-              <input
-                type="submit"
-                value="Ok ✓"
-                class="bg-ok_bg rounded-lg p-3 mt-2 text-lg font-bold text-white"
-              />
-            </div>
-          </form>
+          <!-- </form> -->
         </div>
 
-        <div id="q4" class="hidden">
+        <div id="q4" class="hidden min-w-full">
           <h1 class="text-2xl font-bold">Some Question</h1>
-          <form class="flex flex-col items-start">
+          <!-- <form class="flex flex-col items-start"> -->
             <p class="italic text-xs font-extralight">
               Select one of these options
             </p>
             <div
-              class="border border-black min-w-full rounded-lg p-5 mt-3 font-bold"
+              class="border border-black min-w-full rounded-lg pl-5 mt-3  font-bold"
             >
               <span class="p-3 bg-header_bg text-white rounded-md">A</span>
-              <input type="button" value="This is one answer" />
+              <input type="button"  class= "py-5 pl-2 pr-10" value="This is one answer" />
             </div>
             <div
-              class="border border-black min-w-full rounded-lg p-5 my-2 font-bold"
+              class="border border-black min-w-full rounded-lg pl-5 mt-3  font-bold"
             >
               <span class="p-3 bg-header_bg text-white rounded-md">B</span>
-              <input type="button" value="This is another answer" />
+              <input type="button"  class= "py-5 pl-2 pr-10" value="This is another answer" />
             </div>
             <div
-              class="border border-black min-w-full rounded-lg p-5 my-2 font-bold"
+              class="border border-black min-w-full rounded-lg pl-5 mt-3 font-bold"
             >
               <span class="p-3 bg-header_bg text-white rounded-md">C</span>
-              <input type="button" value="This is another answer" />
+              <input type="button"  class= "py-5 pl-2 pr-10" value="This is another answer" />
             </div>
             <div
-              class="border border-black min-w-full rounded-lg p-5 my-2 font-bold"
+              class="border border-black min-w-full rounded-lg pl-5 mt-3  font-bold"
             >
               <span class="p-3 bg-header_bg text-white rounded-md">C</span>
-              <input type="button" value="This is another answer" />
+              <input type="button"  class= "py-5 pl-2 pr-10" value="This is another answer" />
             </div>
-            <div class="flex ml-auto">
-              <input
-                type="submit"
-                value="Ok ✓"
-                class="bg-ok_bg rounded-lg p-3 mt-2 text-lg font-bold text-white"
-              />
-            </div>
-          </form>
+          <!-- </form> -->
         </div>
 
-        <div id="q5" class="hidden">
+        <div id="q5" class="hidden min-w-full">
           <h1 class="text-2xl font-bold">Some Question</h1>
-          <form class="flex flex-col items-start">
-            <p class="italic text-xs font-extralight">
-              Select one of these options
-            </p>
+          <!-- <form name="registration" class="flex flex-col items-start"> -->
+            <p class="italic text-xs font-extralight">Fill in the blanks</p>
             <div
-              class="border border-black min-w-full rounded-lg p-5 mt-3 font-bold"
+              class="flex flex-col min-w-full sm:gap-2 sm:grid sm:grid-cols-2 sm:items-center font-normal border border-black rounded-lg p-5 mt-3 font-bold"
             >
-              <span class="p-3 bg-header_bg text-white rounded-md">A</span>
-              <input type="button" value="This is one answer" />
-            </div>
-            <div
-              class="border border-black min-w-full rounded-lg p-5 my-2 font-bold"
-            >
-              <span class="p-3 bg-header_bg text-white rounded-md">B</span>
-              <input type="button" value="This is another answer" />
+              <div class="flex-col">
+                <label for="firstName" class="font-normal w-full"
+                  >First Name</label
+                >
+                <input
+                  class="p-2 min-w-full sm:max-w-full min-h-full rounded-lg border-form_border"
+                  type="text"
+                  aria-label="First Name"
+                  id="firstName"
+                  name="lastName"
+                  required
+                />
+              </div>
+              <div>
+                <label for="lastName" class="font-normal">Last Name</label>
+                <input
+                  class="p-2 min-w-full sm:max-w-full rounded-lg border-form_border"
+                  type="text"
+                  aria-label="Last Name"
+                  id="lastName"
+                  name="lastName"
+                  required
+                />
+              </div>
+              <div>
+                <label for="email" id="email" class="font-normal">Valid Email</label>
+                <input
+                  class="p-2 min-w-full sm:max-w-full rounded-lg border-form_border"
+                  type="email"
+                  aria-label="Last"
+                  id="email"
+                  name="email"
+                  required
+                />
+                <p class="italic font-light text-xs">🔒 We don't send spam to our users</p>
+              </div>
+              <div>
+                <label for="phone" id="phone" class="font-normal"
+                  >Valid Phone Number</label
+                >
+                <input
+                  class="p-2 min-w-full sm:max-w-full rounded-lg border-form_border bg-input_bg"
+                  type="text"
+                  aria-label="Last"
+                  id="phone"
+                  name="phone"
+                  required
+                />
+              </div>
+              <div>
+                <label for="zip"  >Zip Code</label>
+                <input
+                  class="p-2 min-w-full sm:max-w-full rounded-lg border-form_border bg-input_bg"
+                  type="text"
+                  aria-label="Last"
+                  name="zip"
+                  id="zip"
+                  required
+                />
+              </div>
+              <div class="col-span-2">
+                <label for="description" id="description" "font-normal"
+                  >Describe what happened</label
+                >
+                <textarea
+                  class="p-2 min-w-full rounded-lg border-form_border bg-input_bg"
+                  aria-label="Description"
+                  id="description"
+                  name="description"
+                ></textarea>
+              </div>
+              <div class="flex flex-row space-x-2 mt-3">
+                <input type="checkbox"></input>
+                <div>
+                <p class="text-xs font-ultralight">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam blanditiis unde doloremque labore fugiat dolores temporibus culpa provident, vitae odit quaerat esse maiores? Quam voluptatum nulla laudantium ad! Sapiente, ad.</p>
+                </div>
+              </div>
+
             </div>
 
-            <div class="flex ml-auto">
+            <div class="flex ml-auto justify-center max-w-fit">
               <input
                 type="submit"
                 value="Ok ✓"
                 class="bg-ok_bg rounded-lg p-3 mt-2 text-lg font-bold text-white"
+                id="submit"
               />
             </div>
           </form>
@@ -252,11 +297,16 @@
       </div>
 
       <!-- Footer -->
-      <footer class="flex justify-center">
+      <footer class="flex flex-col justify-center p-10">
         <!-- Seperater line -->
-        <span></span>
-        <div>
-          <p>Contact us</p>
+        <div class="h-px bg-span_bg w-full my-5">
+          <span></span>
+        </div>
+        <div class="flex-col text-center ">
+          <p class="font-bold text-lg">Contact us:</p>
+          <p>info@freelegalreviews.com</p>
+          <p>Privacy Policy</p>
+          <p class="font-light text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto in delectus dolores cumque consequatur! Blanditiis ratione tempora maxime libero quaerat numquam recusandae, nobis, vel enim nostrum eius dolores dicta eveniet!</p>
         </div>
       </footer>
     </div>
